@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+Register
+</title>
+<link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+    <nav id="navbar">
+        <div class="container">
+        <ul> 
+            <li><a href="portfolio.html">Home</a></li>
+        <li><a href="biography.html">About Me</a></li>
+        <li><a href="expertise.html"> Expertise</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Get in Touch</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <form class="form-horizontal" name="myform" action="/action_page.php">
+<div class="form-group">
+<label>
+First  name</label>
+<div>
+<input class="form-control" placeholder="First Name" name="name">
+</div></div>
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="email">Email:</label>
+                  <div class="col-sm-10">
+                    <input type="email" class="form-control" id="email" placeholder="Enter email">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="pwd">Password:</label>
+                  <div class="col-sm-10">
+                    <input type="password"  name="pwd" class="form-control" id="pwd" placeholder="Enter password">
+                </div>
+       Show Password<input type="radio" onclick="showpassword()">           </div>
+
+
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-sm-offset-2 col-sm-10">
+<button type="submit" onclick="validateform()"  class="btn">Submit</button>
+                  </div>
+                </div>
+              
+              </form>
+        </body>
+<script>
+  var str = "Visit  Great W3Schools!";
+var n = str.search("W3Schools");
+console.log(n);
+
+function showpassword() {
+var x= document.getElementById("pwd");
+if(x.type==="password"){
+x.type="text";
+}
+else{
+x.type="password";
+}
+}
+</script>
+<script>
+function validateform(){
+var name= document.myform.name.value;
+var password=document.myform.pwd.value;
+if(name==""){
+alert("Name can't be blank")
+return false
+}
+else if(password.length<6){
+alert("password must be between 6 to 15 characters long");
+return false
+}
+}
+</script>
+<style>
+.form-horizontal{
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-size:22px;
+}
+  body{
+   margin:0;
+    background-color:#f4f4f4;
+
+    }
+    
+    .container{
+        width:100%;
+        margin:auto;
+        overflow:hidden;
+    }
+    #navbar{
+        background-color:#000bbf;
+        opacity: 0.7;
+        color:#fff;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        line-height:1.6em;
+        text-align:right;
+        margin:0px;
+    }
+    #navbar ul{
+        padding:0;
+        list-style:none;
+    }
+    #navbar li{
+        display:inline;
+    }
+    #navbar a{
+        color:#fff;
+        text-decoration:none;
+        font-size:18px;
+        padding-right:15px;
+    }
+    #navbar a:hover{
+        color:yellow;
+        text-decoration:underline;
+        text-decoration-color: white;   
+        } 
+body{
+background-image: url('victory.jpg');
+background-repeat: no-repeat;
+background-size: cover;
+}
+.form-control{
+width:90%;
+padding: 10px;
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+font-size: 15px;
+}
+.form-control:hover{
+width:90%;
+opacity:0.7;
+padding: 10px;
+}
+.form-horizontal{
+padding: 10px;
+}
+.btn{
+align-items: center;
+justify-content: center;
+background-color: #fff;
+border: 1px black solid;
+margin-left:20px;
+}
+.btn:hover{
+background-color: #000bbf;
+opacity:0.5;
+color:white;
+font-weight:bold ;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+</style>
+</html>
